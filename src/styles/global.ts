@@ -8,6 +8,7 @@ export default createGlobalStyle`
     }
 
     body {
+      font-family: 'Open Sans', sans-serif;
       background: ${({ theme }) => theme.colors.background}
     }
 `
