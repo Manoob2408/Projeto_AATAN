@@ -9,7 +9,13 @@ import {
   MenuItemContainer,
   MenuItemButton,
   MenuItemTitle,
-  TabMenu
+  TabMenu,
+  Card,
+  CardButton,
+  CardText,
+  CardTitle,
+  CardContent,
+  CardImageContainer
 } from '../../styles/pages/home'
 
 interface MenuItemProps {
@@ -38,6 +44,23 @@ export default function Home () {
         <Header />
       </HeaderContainer>
       <Carousel />
+      <Card>
+        <CardContent>
+          <CardTitle>
+            Seja Bem-Vindo!
+          </CardTitle>
+          <CardText>
+            Veja a importância da adoção
+          </CardText>
+          <CardButton>
+            Veja Agora!
+          </CardButton>
+        </CardContent>
+        <CardImageContainer>
+          <Image src="/images/animals/19.png" width="100%" height="100%" objectFit="contain"/>
+        </CardImageContainer>
+
+      </Card>
       <Menu>
         <MenuItem
           title="Animais"
@@ -67,9 +90,12 @@ export default function Home () {
           secondColorHex="#2AC975"
           url=""
         />
+
       </Menu>
       <Highlights />
-      <TabMenu />
+      <TabMenu>
+        {/* <TabMenuItem></TabMenuItem> */}
+      </TabMenu>
     </Container>
   )
 }

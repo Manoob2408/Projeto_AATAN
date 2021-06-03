@@ -14,10 +14,6 @@ export const HeaderContainer = styled.div`
   box-shadow: 0px 3px 6px #0000000F;
 `
 
-export const Highlights = styled.div``
-
-export const TabMenu = styled.div``
-
 export const Menu = styled.div`
   display: flex;
   width: 100%;
@@ -25,20 +21,14 @@ export const Menu = styled.div`
   justify-content: space-evenly;
 `
 
-export const MenuItemContainer = styled.div`
+export const MenuItemContainer = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  border: 0;
+  background: transparent;
 
-
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
 `
 
 interface MenuItemButtonProps {
@@ -59,6 +49,59 @@ export const MenuItemButton = styled.div<MenuItemButtonProps>`
 
 export const MenuItemTitle = styled.div`
   margin-top: 8px;
-  font: normal normal bold 13px/18px Open Sans;
+  font-family: 'Open Sans', sans-serif;
+  font: normal normal bold 13px Open Sans;
   color: #404E7F;
+`
+
+export const Highlights = styled.div``
+
+export const TabMenu = styled.div``
+
+export const Card = styled.div`
+  display: flex;
+  width: 335px;
+  height: 183px;
+  background: #FFC757;
+  box-shadow: 0px 3px 6px #00000024;
+  border-radius: 14px;
+  padding: 17px;
+`
+
+export const CardContent = styled.div`
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+`
+
+export const CardImageContainer = styled.div`
+  display: flex;
+  flex: 1;
+`
+
+export const CardTitle = styled.div`
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+`
+
+export const CardText = styled.div`
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+`
+
+export const CardButton = styled.button`
+  width: 132px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  border: 0px;
+  padding: 11px 17px;
+  border-radius: 4px;
+  background: black;
+  cursor: pointer;
 `
