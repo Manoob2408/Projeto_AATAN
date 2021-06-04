@@ -144,7 +144,6 @@ export const HighlightsSeeMoreIcon = styled.div`
 
 export const HighlightsContent = styled.div`
   margin-top: 14px;
-  padding: 0 35px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 86px 86px;
@@ -159,10 +158,6 @@ export const HighlightsPrimaryImage = styled.div`
   border: 2px solid #A7A7A7;
   border-radius: 7px 0px 0px 7px;
   box-shadow: 0px 3px 6px #00000045;
-`
-
-export const HighlightsSecondaryImageContainer = styled.div`
-
 `
 
 export const HighlightsSecondaryImage = styled.div`

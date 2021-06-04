@@ -120,9 +120,6 @@ export default function Home () {
           <HighlightsPrimaryImage>
             <Image src="/images/animals/3.jpg" layout="fill" objectFit="cover"/>
           </HighlightsPrimaryImage>
-          {/* <HighlightsSecondaryImageContainer>
-
-          </HighlightsSecondaryImageContainer> */}
             <HighlightsSecondaryImage>
               <Image src="/images/animals/2.jpg" layout="fill" objectFit="cover"/>
             </HighlightsSecondaryImage>
