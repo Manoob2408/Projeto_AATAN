@@ -2,12 +2,14 @@ import styled from 'styled-components'
 
 export const PageContainer = styled.div`
   display: flex;
+  position: relative;
+  min-height: 100vh;
   justify-content: center;
-
 `
 
 export const Container = styled.div`
   max-width: 375px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,8 +60,6 @@ export const MenuItemTitle = styled.div`
   font: normal normal bold 13px Open Sans;
   color: #404E7F;
 `
-
-export const TabMenu = styled.div``
 
 export const Card = styled.div`
   position: relative;
@@ -178,4 +178,42 @@ export const HighlightsSecondaryImage = styled.div`
   border: 2px solid #A7A7A7;
   border-radius: 0px 7px 7px 0px;
   box-shadow: 0px 3px 6px #00000045; 
+`
+
+export const TabMenu = styled.div`
+  display: flex;
+  bottom: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  border-top: 2px solid #E9E9E9;
+`
+
+export const TabMenuHomeButtonContainer = styled.button`
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  border: 0px;
+  background: transparent;
+  border-bottom: 2px solid #E9E9E9;
+  cursor: pointer;
+`
+
+export const TabMenuHomeButton = styled.div`
+  position: relative;
+  border-radius: 50%;
+  height: 74px;
+  width: 74px;
+`
+
+export const TabMenuItem = styled.button`
+  position: relative;
+  display: flex;
+  width: 26px;
+  height: 26px;
+  justify-content: center;
+  border: 0px;
+  background: transparent;
+  cursor: pointer;
 `

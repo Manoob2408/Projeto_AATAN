@@ -24,8 +24,10 @@ import {
   HighlightsContent,
   HighlightsPrimaryImage,
   HighlightsSecondaryImage,
-  HighlightsSecondaryImageContainer,
-  PageContainer
+  PageContainer,
+  TabMenuHomeButton,
+  TabMenuHomeButtonContainer,
+  TabMenuItem
 } from '../../styles/pages/home'
 
 interface MenuItemProps {
@@ -130,7 +132,23 @@ export default function Home () {
           </HighlightsContent>
         </Highlights>
         <TabMenu>
-          {/* <TabMenuItem></TabMenuItem> */}
+            <TabMenuItem>
+              <Image src="/images/icons/icon-user-alt.png" layout="fill" objectFit="contain" />
+            </TabMenuItem>
+            <TabMenuItem>
+              <Image src="/images/icons/icon-heart.png" layout="fill" objectFit="contain" />
+            </TabMenuItem>
+          <TabMenuHomeButtonContainer>
+            <TabMenuHomeButton>
+              <Image src="/images/icons/icon-home-circle.png" layout="fill" objectFit="contain" />
+            </TabMenuHomeButton>
+          </TabMenuHomeButtonContainer>
+            <TabMenuItem>
+              <Image src="/images/icons/icon-comments.png" layout="fill" objectFit="contain" />
+            </TabMenuItem>
+            <TabMenuItem>
+              <Image src="/images/icons/icon-info-circle.png" layout="fill" objectFit="contain" />
+            </TabMenuItem>
         </TabMenu>
       </Container>
     </PageContainer>
