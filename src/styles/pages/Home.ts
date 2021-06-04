@@ -1,8 +1,13 @@
 import styled from 'styled-components'
 
+export const PageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
+`
+
 export const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+  max-width: 375px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,6 +62,7 @@ export const MenuItemTitle = styled.div`
 export const TabMenu = styled.div``
 
 export const Card = styled.div`
+  position: relative;
   display: flex;
   width: 335px;
   height: 183px;
@@ -67,16 +73,23 @@ export const Card = styled.div`
 `
 
 export const CardContent = styled.div`
+  position: absolute;
+  padding: 17px;
+  top: 0;
+  left: 0;
   display: flex;
-  flex: 2;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
+  width: 70%;
 `
 
 export const CardImageContainer = styled.div`
-  display: flex;
-  flex: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 95%;
+  width: 95%;
 `
 
 export const CardTitle = styled.div`
@@ -87,7 +100,7 @@ export const CardTitle = styled.div`
 
 export const CardText = styled.div`
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: bold;
 `
 
@@ -106,7 +119,6 @@ export const CardButton = styled.button`
 
 export const Highlights = styled.div`
   width: 100%;
-  padding: 28px;
 `
 
 export const HighlightsHeader = styled.div`
@@ -149,7 +161,7 @@ export const HighlightsContent = styled.div`
   grid-template-rows: 86px 86px;
   grid-template-areas: "first second"
                        "first second";
-  gap: 10px;
+  gap: 4px;
 `
 
 export const HighlightsPrimaryImage = styled.div`

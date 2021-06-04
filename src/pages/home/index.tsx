@@ -24,7 +24,8 @@ import {
   HighlightsContent,
   HighlightsPrimaryImage,
   HighlightsSecondaryImage,
-  HighlightsSecondaryImageContainer
+  HighlightsSecondaryImageContainer,
+  PageContainer
 } from '../../styles/pages/home'
 
 interface MenuItemProps {
@@ -39,7 +40,7 @@ function MenuItem ({ title, imageSrc, firstColorHex, secondColorHex, url }: Menu
   return (
     <MenuItemContainer>
       <MenuItemButton firstColorHex={firstColorHex} secondColorHex={secondColorHex}>
-        <Image src={imageSrc} width="100%" height="100%" objectFit="contain"/>
+        <Image src={imageSrc} width="100%" height="100%" objectFit="contain" />
       </MenuItemButton>
       <MenuItemTitle>{title}</MenuItemTitle>
     </MenuItemContainer>
@@ -48,89 +49,91 @@ function MenuItem ({ title, imageSrc, firstColorHex, secondColorHex, url }: Menu
 
 export default function Home () {
   return (
-    <Container>
-      <HeaderContainer>
-        <Header />
-      </HeaderContainer>
-      <Carousel />
-      <Card>
-        <CardContent>
-          <CardTitle>
-            Seja Bem-Vindo!
-          </CardTitle>
-          <CardText>
-            Veja a importância da adoção
-          </CardText>
-          <CardButton>
-            Veja Agora!
-          </CardButton>
-        </CardContent>
-        <CardImageContainer>
-          <Image src="/images/animals/19.png" width="100%" height="100%" objectFit="contain"/>
-        </CardImageContainer>
+    <PageContainer>
+      <Container>
+        <HeaderContainer>
+          <Header />
+        </HeaderContainer>
+        <Carousel />
+        <Card>
+          <CardImageContainer>
+            <Image src="/images/animals/19.png" layout="fill" objectFit="contain" objectPosition="right center" />
+          </CardImageContainer>
+          <CardContent>
+            <CardTitle>
+              Seja Bem-Vindo!
+              </CardTitle>
+            <CardText>
+              Veja a importância da adoção
+              </CardText>
+            <CardButton>
+              Veja Agora!
+              </CardButton>
+          </CardContent>
+        </Card>
+        <Menu>
+          <MenuItem
+            title="Animais"
+            imageSrc="/images/icons/icon-pets.png"
+            firstColorHex="#FF885A"
+            secondColorHex="#FE6347"
+            url=""
+          />
+          <MenuItem
+            title="Eventos"
+            imageSrc="/images/icons/icon-calendar-day.png"
+            firstColorHex="#71D4FE"
+            secondColorHex="#40B0F9"
+            url=""
+          />
+          <MenuItem
+            title="Doação"
+            imageSrc="/images/icons/icon-hand-holding-heart.png"
+            firstColorHex="#FEB940"
+            secondColorHex="#F99327"
+            url=""
+          />
+          <MenuItem
+            title="Voluntariado"
+            imageSrc="/images/icons/icon-users.png"
+            firstColorHex="#59E48A"
+            secondColorHex="#2AC975"
+            url=""
+          />
 
-      </Card>
-      <Menu>
-        <MenuItem
-          title="Animais"
-          imageSrc="/images/icons/icon-pets.png"
-          firstColorHex="#FF885A"
-          secondColorHex="#FE6347"
-          url=""
-        />
-        <MenuItem
-          title="Eventos"
-          imageSrc="/images/icons/icon-calendar-day.png"
-          firstColorHex="#71D4FE"
-          secondColorHex="#40B0F9"
-          url=""
-        />
-        <MenuItem
-          title="Doação"
-          imageSrc="/images/icons/icon-hand-holding-heart.png"
-          firstColorHex="#FEB940"
-          secondColorHex="#F99327"
-          url=""
-        />
-        <MenuItem
-          title="Voluntariado"
-          imageSrc="/images/icons/icon-users.png"
-          firstColorHex="#59E48A"
-          secondColorHex="#2AC975"
-          url=""
-        />
+        </Menu>
+        <Highlights>
+          <HighlightsHeader>
+            <HighlightsTitle>
+              Destaques
+              </HighlightsTitle>
+            <HighlightsSeeMore>
+              <HighlightsSeeMoreText>
+                Ver mais
+                </HighlightsSeeMoreText>
+              <HighlightsSeeMoreIcon>
+                <Image src="/images/icons/icon-chevron-left.png" width="10" height="10" objectFit="contain" />
+              </HighlightsSeeMoreIcon>
+            </HighlightsSeeMore>
 
-      </Menu>
-      <Highlights>
-        <HighlightsHeader>
-          <HighlightsTitle>
-            Destaques
-          </HighlightsTitle>
-          <HighlightsSeeMore>
-            <HighlightsSeeMoreText>
-              Ver mais
-            </HighlightsSeeMoreText>
-            <HighlightsSeeMoreIcon>
-              <Image src="/images/icons/icon-chevron-left.png" width="10" height="10" objectFit="contain"/>
-            </HighlightsSeeMoreIcon>
-          </HighlightsSeeMore>
-
-        </HighlightsHeader>
-        <HighlightsContent>
-          <HighlightsPrimaryImage>
-            <Image src="/images/animals/3.jpg" layout="fill" objectFit="cover"/>
-          </HighlightsPrimaryImage>
+          </HighlightsHeader>
+          <HighlightsContent>
+            <HighlightsPrimaryImage>
+              <Image src="/images/animals/3.jpg" layout="fill" objectFit="cover" />
+            </HighlightsPrimaryImage>
             <HighlightsSecondaryImage>
-              <Image src="/images/animals/2.jpg" layout="fill" objectFit="cover"/>
+              <Image src="/images/animals/2.jpg" layout="fill" objectFit="cover" />
             </HighlightsSecondaryImage>
             <HighlightsSecondaryImage>
-              <Image src="/images/animals/16.jpg" layout="fill" objectFit="cover"/>
+              <Image src="/images/animals/16.jpg" layout="fill" objectFit="cover" />
             </HighlightsSecondaryImage>
-        </HighlightsContent>
-      </Highlights>
-      <TabMenu>
-        {/* <TabMenuItem></TabMenuItem> */}
-      </TabMenu>
-    </Container>
+          </HighlightsContent>
+        </Highlights>
+        <TabMenu>
+          {/* <TabMenuItem></TabMenuItem> */}
+        </TabMenu>
+      </Container>
+    </PageContainer>
+
   )
 }
