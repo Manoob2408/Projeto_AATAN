@@ -7,6 +7,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: white;
 `
 
 export const MenuIcon = styled(Image).attrs({

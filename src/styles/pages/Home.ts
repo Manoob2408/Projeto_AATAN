@@ -13,13 +13,21 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding-top: 110px;
+  padding-bottom: 120px;
 `
 
 export const HeaderContainer = styled.div`
+  position: fixed;
+  z-index: 10;
+  top: 0;
   width: 100%;
   height: 110px;
   box-shadow: 0px 3px 6px #0000000F;
 `
+
+export const Carousel = styled.div``
 
 export const Menu = styled.div`
   display: flex;
@@ -182,12 +190,14 @@ export const HighlightsSecondaryImage = styled.div`
 
 export const TabMenu = styled.div`
   display: flex;
+  position: fixed;
   bottom: 0;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: 120px;
   border-top: 2px solid #E9E9E9;
+  background: white;
 `
 
 export const TabMenuHomeButtonContainer = styled.button`
@@ -216,4 +226,8 @@ export const TabMenuItem = styled.button`
   border: 0px;
   background: transparent;
   cursor: pointer;
+`
+
+export const Spacer = styled.div`
+  margin-top: 45px;
 `

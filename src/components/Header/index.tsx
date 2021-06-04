@@ -14,7 +14,7 @@ type NotificationIconProps = {
 function NotificationIcon ({ hasMessage }: NotificationIconProps) {
   return (
     <NotificationIconContainer>
-      <NotificationIconImage src="/images/icons/icon-notification.png"/>
+      <NotificationIconImage src="/images/icons/icon-notification.png" objectFit="contain"/>
       { hasMessage && <NotificationIconActive /> }
     </NotificationIconContainer>
   )
@@ -23,8 +23,8 @@ function NotificationIcon ({ hasMessage }: NotificationIconProps) {
 export default function Header () {
   return (
     <Container>
-      <MenuIcon src="/images/icons/icon-menu.png"/>
-      <MenuLogo src="/images/logo.png"/>
+      <MenuIcon src="/images/icons/icon-menu.png" objectFit="contain"/>
+      <MenuLogo src="/images/logo.png" objectFit="contain"/>
       <NotificationIcon hasMessage/>
     </Container>
   )

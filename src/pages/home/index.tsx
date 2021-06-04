@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import Carousel from '../../components/Carousel'
 import Header from '../../components/Header'
 import {
   Container,
   HeaderContainer,
   Highlights,
+  Carousel,
   Menu,
   MenuItemContainer,
   MenuItemButton,
@@ -27,7 +27,8 @@ import {
   PageContainer,
   TabMenuHomeButton,
   TabMenuHomeButtonContainer,
-  TabMenuItem
+  TabMenuItem,
+  Spacer
 } from '../../styles/pages/home'
 
 interface MenuItemProps {
@@ -52,27 +53,30 @@ function MenuItem ({ title, imageSrc, firstColorHex, secondColorHex, url }: Menu
 export default function Home () {
   return (
     <PageContainer>
+      <HeaderContainer>
+        <Header />
+      </HeaderContainer>
       <Container>
-        <HeaderContainer>
-          <Header />
-        </HeaderContainer>
-        <Carousel />
-        <Card>
-          <CardImageContainer>
-            <Image src="/images/animals/19.png" layout="fill" objectFit="contain" objectPosition="right center" />
-          </CardImageContainer>
-          <CardContent>
-            <CardTitle>
-              Seja Bem-Vindo!
-              </CardTitle>
-            <CardText>
-              Veja a importância da adoção
-              </CardText>
-            <CardButton>
-              Veja Agora!
-              </CardButton>
-          </CardContent>
-        </Card>
+        <Spacer />
+        <Carousel>
+          <Card>
+            <CardImageContainer>
+              <Image src="/images/animals/19.png" layout="fill" objectFit="contain" objectPosition="right center" />
+            </CardImageContainer>
+            <CardContent>
+              <CardTitle>
+                Seja Bem-Vindo!
+                </CardTitle>
+              <CardText>
+                Veja a importância da adoção
+                </CardText>
+              <CardButton>
+                Veja Agora!
+                </CardButton>
+            </CardContent>
+          </Card>
+        </Carousel>
+        <Spacer />
         <Menu>
           <MenuItem
             title="Animais"
@@ -104,6 +108,7 @@ export default function Home () {
           />
 
         </Menu>
+        <Spacer />
         <Highlights>
           <HighlightsHeader>
             <HighlightsTitle>
@@ -131,26 +136,26 @@ export default function Home () {
             </HighlightsSecondaryImage>
           </HighlightsContent>
         </Highlights>
-        <TabMenu>
-            <TabMenuItem>
-              <Image src="/images/icons/icon-user-alt.png" layout="fill" objectFit="contain" />
-            </TabMenuItem>
-            <TabMenuItem>
-              <Image src="/images/icons/icon-heart.png" layout="fill" objectFit="contain" />
-            </TabMenuItem>
-          <TabMenuHomeButtonContainer>
-            <TabMenuHomeButton>
-              <Image src="/images/icons/icon-home-circle.png" layout="fill" objectFit="contain" />
-            </TabMenuHomeButton>
-          </TabMenuHomeButtonContainer>
-            <TabMenuItem>
-              <Image src="/images/icons/icon-comments.png" layout="fill" objectFit="contain" />
-            </TabMenuItem>
-            <TabMenuItem>
-              <Image src="/images/icons/icon-info-circle.png" layout="fill" objectFit="contain" />
-            </TabMenuItem>
-        </TabMenu>
       </Container>
+      <TabMenu>
+        <TabMenuItem>
+          <Image src="/images/icons/icon-user-alt.png" layout="fill" objectFit="contain" />
+        </TabMenuItem>
+        <TabMenuItem>
+          <Image src="/images/icons/icon-heart.png" layout="fill" objectFit="contain" />
+        </TabMenuItem>
+        <TabMenuHomeButtonContainer>
+          <TabMenuHomeButton>
+            <Image src="/images/icons/icon-home-circle.png" layout="fill" objectFit="contain" />
+          </TabMenuHomeButton>
+        </TabMenuHomeButtonContainer>
+        <TabMenuItem>
+          <Image src="/images/icons/icon-comments.png" layout="fill" objectFit="contain" />
+        </TabMenuItem>
+        <TabMenuItem>
+          <Image src="/images/icons/icon-info-circle.png" layout="fill" objectFit="contain" />
+        </TabMenuItem>
+      </TabMenu>
     </PageContainer>
 
   )
