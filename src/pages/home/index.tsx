@@ -15,7 +15,16 @@ import {
   CardText,
   CardTitle,
   CardContent,
-  CardImageContainer
+  CardImageContainer,
+  HighlightsHeader,
+  HighlightsTitle,
+  HighlightsSeeMore,
+  HighlightsSeeMoreText,
+  HighlightsSeeMoreIcon,
+  HighlightsContent,
+  HighlightsPrimaryImage,
+  HighlightsSecondaryImage,
+  HighlightsSecondaryImageContainer
 } from '../../styles/pages/home'
 
 interface MenuItemProps {
@@ -92,7 +101,36 @@ export default function Home () {
         />
 
       </Menu>
-      <Highlights />
+      <Highlights>
+        <HighlightsHeader>
+          <HighlightsTitle>
+            Destaques
+          </HighlightsTitle>
+          <HighlightsSeeMore>
+            <HighlightsSeeMoreText>
+              Ver mais
+            </HighlightsSeeMoreText>
+            <HighlightsSeeMoreIcon>
+              <Image src="/images/icons/icon-chevron-left.png" width="10" height="10" objectFit="contain"/>
+            </HighlightsSeeMoreIcon>
+          </HighlightsSeeMore>
+
+        </HighlightsHeader>
+        <HighlightsContent>
+          <HighlightsPrimaryImage>
+            <Image src="/images/animals/3.jpg" layout="fill" objectFit="cover"/>
+          </HighlightsPrimaryImage>
+          {/* <HighlightsSecondaryImageContainer>
+
+          </HighlightsSecondaryImageContainer> */}
+            <HighlightsSecondaryImage>
+              <Image src="/images/animals/2.jpg" layout="fill" objectFit="cover"/>
+            </HighlightsSecondaryImage>
+            <HighlightsSecondaryImage>
+              <Image src="/images/animals/16.jpg" layout="fill" objectFit="cover"/>
+            </HighlightsSecondaryImage>
+        </HighlightsContent>
+      </Highlights>
       <TabMenu>
         {/* <TabMenuItem></TabMenuItem> */}
       </TabMenu>

@@ -54,8 +54,6 @@ export const MenuItemTitle = styled.div`
   color: #404E7F;
 `
 
-export const Highlights = styled.div``
-
 export const TabMenu = styled.div``
 
 export const Card = styled.div`
@@ -104,4 +102,73 @@ export const CardButton = styled.button`
   border-radius: 4px;
   background: black;
   cursor: pointer;
+`
+
+export const Highlights = styled.div`
+  width: 100%;
+  padding: 28px;
+`
+
+export const HighlightsHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const HighlightsTitle = styled.div`
+  font-family: 'Open Sans', sans-serif;
+  font-size: 23px;
+  font-weight: bold;
+`
+
+export const HighlightsSeeMore = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+`
+
+export const HighlightsSeeMoreText = styled.div`
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #B8B8B8;
+  text-decoration: none;
+`
+
+export const HighlightsSeeMoreIcon = styled.div`
+  margin-left: 8px;
+  transform: rotate(-90deg);
+`
+
+export const HighlightsContent = styled.div`
+  margin-top: 14px;
+  padding: 0 35px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 86px 86px;
+  grid-template-areas: "first second"
+                       "first second";
+  gap: 10px;
+`
+
+export const HighlightsPrimaryImage = styled.div`
+  grid-area: first;
+  position: relative;
+  border: 2px solid #A7A7A7;
+  border-radius: 7px 0px 0px 7px;
+  box-shadow: 0px 3px 6px #00000045;
+`
+
+export const HighlightsSecondaryImageContainer = styled.div`
+
+`
+
+export const HighlightsSecondaryImage = styled.div`
+  
+  position: relative;
+  border: 2px solid #A7A7A7;
+  border-radius: 0px 7px 7px 0px;
+  box-shadow: 0px 3px 6px #00000045; 
 `
