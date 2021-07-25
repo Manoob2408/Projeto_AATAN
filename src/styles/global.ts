@@ -9,6 +9,19 @@ export default createGlobalStyle`
 
     body {
       font-family: 'Open Sans', sans-serif;
-      background: ${({ theme }) => theme.colors.background}
+      background: ${({ theme }) => theme.colors.background};
     }
-`
+
+    
+
+  ::-webkit-scrollbar {
+    width: 0.8rem;
+    background: ${({ theme }) => theme.colors.background};
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #FFC757;
+    border-radius: 1rem;
+  }
+
+`;
