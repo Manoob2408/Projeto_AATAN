@@ -37,12 +37,11 @@ export default class MyDocument extends Document {
     }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
-          <title>AATAN | Abrigo de Animais Necessitados</title>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"

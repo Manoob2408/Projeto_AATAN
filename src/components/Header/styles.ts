@@ -42,3 +42,12 @@ export const NotificationIconActive = styled.div`
   background-color: #FE6447;
   border-radius: 50%;
 `
+
+export const HeaderContainer = styled.div`
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 7rem;
+  box-shadow: 0px 3px 6px #0000000F;
+`
