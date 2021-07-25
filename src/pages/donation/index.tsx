@@ -3,10 +3,17 @@ import React, { useState } from "react";
 import { Button } from "../../components/Button";
 import { DonationCardContent } from "../../components/DonationCardContent";
 import { FooterMenu } from "../../components/FooterMenu";
-import { ContentPage, DonationButtonContainer, DonationGrid, TitlePage } from "./styles";
+import { PaymentDonation } from "../../components/PaymentDonation";
+import {
+  ContentPage,
+  DonationButtonContainer,
+  DonationGrid,
+  TitlePage,
+} from "./styles";
 
 export default function Donation() {
   const [donationOption, setDonationOption] = useState("");
+  const [isDonating, setIsDonating] = useState(false);
 
   const donationsContent = [
     {
@@ -62,9 +69,11 @@ export default function Donation() {
           <Button
             title="DOAR"
             donationOption={donationOption}
+            setIsDonating={setIsDonating}
             disabled={!donationOption}
           />
         </DonationButtonContainer>
+        {isDonating && <PaymentDonation />}
         <FooterMenu />
       </ContentPage>
     </>
