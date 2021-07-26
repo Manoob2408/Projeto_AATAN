@@ -11,6 +11,12 @@ Desenvolvimento de um PWA para a AATAN
 
 ## Quick Start
 - Baixar as dependências:
+
+## Protótipo
+
+- Tela de doação e cupom de desconto: https://www.figma.com/file/Az7aMs1lESYwHM4NMR0qZ3/DOA%C3%87%C3%83O-SCREEN?node-id=0%3A1
+
+
 ```
 npm i
 
