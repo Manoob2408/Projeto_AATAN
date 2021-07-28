@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Header from '../../components/Header'
+import { Form } from "./styles";
 
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -33,7 +34,7 @@ const [password, setPassword] = useState('');
 
 const router = useRouter();
 
-async function handleLogin(e){
+async function handleLogin(e: any) {
   e.preventDefault();
 
 
@@ -57,25 +58,27 @@ async function handleLogin(e){
           height="129.04"
         />
         <Card>
-          <form className="formStile" onSubmit={handleLogin} 
-          style={{ width: "20rem",background: "#fff",padding: "20px",
+          <Form className="formStile" onSubmit={handleLogin} 
+          style={{ width: "20rem",background: "#FAF5E3",padding: "20px",
             display: "flex",  "flexDirection": "column",borderRadius: '10px',alignItems: 'center'}}>
             <input
               type="email"
-              placeholder="Insira seu email"
+              placeholder="Insira seu e-mail"
               required
               value={email}
+              className="input"
               onChange={e => setEmail(e.target.value)}
             />       
              <input
-              type="text"
+              type="password"
               placeholder="Insira sua senha"
               required
               value={password}
+              className="input"
               onChange={e => setPassword(e.target.value)}
             />  
             <button className="btn" type="submit"  > ENTRAR</button>
-          </form>
+          </Form>
 
         </Card>
 

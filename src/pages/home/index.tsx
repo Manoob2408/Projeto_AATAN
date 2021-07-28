@@ -1,35 +1,7 @@
 import Image from 'next/image'
+import React from 'react'
 import Header from '../../components/Header'
-import {
-  Container,
-  HeaderContainer,
-  Highlights,
-  Carousel,
-  Menu,
-  MenuItemContainer,
-  MenuItemButton,
-  MenuItemTitle,
-  TabMenu,
-  Card,
-  CardButton,
-  CardText,
-  CardTitle,
-  CardContent,
-  CardImageContainer,
-  HighlightsHeader,
-  HighlightsTitle,
-  HighlightsSeeMore,
-  HighlightsSeeMoreText,
-  HighlightsSeeMoreIcon,
-  HighlightsContent,
-  HighlightsPrimaryImage,
-  HighlightsSecondaryImage,
-  PageContainer,
-  TabMenuHomeButton,
-  TabMenuHomeButtonContainer,
-  TabMenuItem,
-  Spacer
-} from '../../styles/pages/home'
+import { Card, CardButton, CardContent, CardImageContainer, CardText, CardTitle, Carousel, Container, HeaderContainer, Highlights, HighlightsContent, HighlightsHeader, HighlightsPrimaryImage, HighlightsSecondaryImage, HighlightsSeeMore, HighlightsSeeMoreIcon, HighlightsSeeMoreText, HighlightsTitle, Menu, MenuItemButton, MenuItemContainer, MenuItemTitle, PageContainer, Spacer, TabMenu, TabMenuHomeButton, TabMenuHomeButtonContainer, TabMenuItem } from '../../styles/pages/Home'
 
 interface MenuItemProps {
   title: string
@@ -66,13 +38,13 @@ export default function Home () {
             <CardContent>
               <CardTitle>
                 Seja Bem-Vindo!
-                </CardTitle>
+              </CardTitle>
               <CardText>
                 Veja a importância da adoção
                 </CardText>
               <CardButton>
                 Veja Agora!
-                </CardButton>
+              </CardButton>
             </CardContent>
           </Card>
         </Carousel>
@@ -113,11 +85,11 @@ export default function Home () {
           <HighlightsHeader>
             <HighlightsTitle>
               Destaques
-              </HighlightsTitle>
+            </HighlightsTitle>
             <HighlightsSeeMore>
               <HighlightsSeeMoreText>
                 Ver mais
-                </HighlightsSeeMoreText>
+              </HighlightsSeeMoreText>
               <HighlightsSeeMoreIcon>
                 <Image src="/images/icons/icon-chevron-left.png" width="10" height="10" objectFit="contain" />
               </HighlightsSeeMoreIcon>

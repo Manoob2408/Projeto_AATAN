@@ -28,7 +28,7 @@ export default function SignUpAdm() {
 
   const router = useRouter();
 
-  async function handleRegister(e) {
+  async function handleRegister(e: any): Promise<void> {
     e.preventDefault();
 
     const data = {

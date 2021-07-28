@@ -24,7 +24,6 @@ export const HeaderContainer = styled.div`
   top: 0;
   width: 100%;
   height: 110px;
-  box-shadow: 0px 3px 6px #0000000F;
 `
 
 export const Carousel = styled.div``

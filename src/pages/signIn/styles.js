@@ -10,6 +10,8 @@ export const Container = styled.div`
 export const Form = styled.form`
   width: 20rem;
   background: #fff;
+  width: 30vw;
+  min-width: 25rem;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -25,16 +27,6 @@ export const Form = styled.form`
     text-align: center;
   }
  
-  button {
-    color: #fff;
-    font-size: 16px;
-    background: #FFC757;
-    height: 46px;
-    border: 0;
-    border-radius: 2px;
-    width: 90%;
-    margin-top: 40px;
-  }
   hr {
     margin: 20px 0;
     border: none;
@@ -53,9 +45,7 @@ export const Form = styled.form`
   }
   
   input {
-    border: 0;
     border-bottom: 2px solid #D8D8D8;
-    outline: none;
     transition: .2s ease-in-out;
     box-sizing: border-box;
   }
@@ -71,15 +61,6 @@ export const Form = styled.form`
     cursor: text;
     transition: .2s ease-in-out;
     box-sizing: border-box;
-  }
-  
-  input,
-  label {
-    width: 100%;
-    height: 3rem;
-    font-size: 1rem;
-    margin-top: 30px;
-    color:#D8D8D8;
   }
   
   /* Interation */

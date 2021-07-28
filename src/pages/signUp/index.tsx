@@ -30,7 +30,7 @@ export default function SignUp() {
 
   const router = useRouter();
 
-  async function handleRegister(e) {
+  async function handleRegister(e: any) {
     e.preventDefault();
 
     const data = {
@@ -54,53 +54,60 @@ export default function SignUp() {
   return (
     <PageContainer>
       <HeaderContainer>
-        <header style={{ marginTop: "30px", color: '#A1A1A1' }}>
-          <div className="row headerAlign">
-          <div>
-          <Link href="/option">
-            <FiChevronLeft size={30} color="#A1A1A1" />
-          </Link>
-          </div>
-          <div>
-          <span className="textoHeader">CADASTRO DE USUÁRIO</span>
-          </div>
+        <header style={{ marginTop: "30px", color: 'white', fontWeight: 'bold' }}>
+          <div style={{display: 'flex', alignItems: 'center', fontSize: '2rem'}}>
+            <div style={{display: 'flex', alignItems: 'center'}}>
+              <Link href="/option">
+                <FiChevronLeft size={35} color="white" />
+              </Link>
+            </div>
+            <div>
+              <span className="textoHeader" >CADASTRO DE USUÁRIO</span>
+            </div>
           </div>
         </header>
       </HeaderContainer>
       <Container>
 
         <div style={{ marginTop: "30px" }}>
-          <form onSubmit={handleRegister}>
+          <Form onSubmit={handleRegister}>
             <input placeholder="Nome "
+              className="input"
               value={name}
               onChange={e => setName(e.target.value)}
             />
-            <input type="email" placeholder="Email"
+            <input type="email" placeholder="E-mail"
+              className="input"
               value={email}
               onChange={e => setEmail(e.target.value)}
             />
-            <input placeholder="Whatsapp"
+            <input placeholder="WhatsApp"
+              className="input"
               value={whatsapp}
               onChange={e => setWhatsapp(e.target.value)}
             />
 
             <div className="input-group">
               <input placeholder="Cidade"
+              className="input"
                 value={city}
                 onChange={e => setCity(e.target.value)}
               />
               <input placeholder="UF" 
+              className="input"
                 value={uf}
                 onChange={e => setUf(e.target.value)}
               />
                <input placeholder="Senha ex:13546" 
+               type="password"
+              className="input"
                 value={password}
                 onChange={e => setPassword(e.target.value)}
               />
             </div>
 
             <button className="btn" type="submit">CADASTRAR</button>
-          </form>
+          </Form>
         </div>
         <CardImageContainer>
           <Image src="/images/footprints.png" layout="fill" objectFit="contain" objectPosition="bottom" />

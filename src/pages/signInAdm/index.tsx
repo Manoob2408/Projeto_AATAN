@@ -27,9 +27,8 @@ import api from '../../services/api';
 export default function SignInAdm() {
 const [id, setId] = useState('');
 const router = useRouter();
-async function handleLogin(e){
+async function handleLogin(e: any) {
   e.preventDefault();
-
 
   try {
     const response = await api.post('session', {id});
@@ -52,13 +51,14 @@ async function handleLogin(e){
         />
         <Card>
           <form className="formStile" onSubmit={handleLogin} 
-          style={{ width: "20rem",background: "#fff",padding: "20px",
+          style={{ width: "20rem",background: "#FAF5E3",padding: "20px",
             display: "flex",  "flexDirection": "column",borderRadius: '10px',alignItems: 'center'}}>
             <input
               type="text"
               placeholder="Insira seu código de acesso"
               required
               value={id}
+              className="input"
               onChange={e => setId(e.target.value)}
             />       
             <button className="btn" type="submit"  > ENTRAR</button>

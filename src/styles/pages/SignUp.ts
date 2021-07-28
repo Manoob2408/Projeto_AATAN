@@ -5,7 +5,7 @@ export const PageContainer = styled.div`
   position: relative;
   min-height: 100vh;
   justify-content: center;
-  background-color: #FFF;
+  background-color: #FFC757;
 `
 
 export const Container = styled.div`
@@ -14,6 +14,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center
   padding-top: 110px;
   padding-bottom: 120px;
